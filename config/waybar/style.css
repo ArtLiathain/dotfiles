@@ -1,0 +1,80 @@
+@import url('./waybar-colours.css');
+
+* {
+    font-size:14px;
+    font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
+	transition: all 0.5s ease;
+}
+window#waybar{
+    all: unset;
+}
+.modules-left {
+    margin: 5px 0px 2px 10px;
+}
+.modules-center {
+    margin: 5px 0px 2px 0px;
+}
+.modules-right {
+    margin: 5px 10px 2px 0px;
+}
+tooltip {
+    background: @color0;
+    border: 1px solid alpha(@color12, 0.8);
+    color: @color12;
+}
+
+#clock:hover, #custom-arch-icon, #custom-updates:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-updates:hover, #tray:hover #custom-battery:hover label {
+    color: @color2;
+}
+
+.modules-right .module, .modules-left .module, .modules-center .module {
+    color: @color12;
+}
+
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-battery, #custom-updates, #custom-pomodoro, #privacy, #custom-arch-icon {
+    color: @color12;
+	padding: 8px 15px;
+	margin: 0px 2px;
+	border-radius: 10px;
+    background: alpha(@color0, .95);
+    box-shadow: 0px 0px 2px alpha(@color7, 0.35);
+}
+
+#audio .module, #connection .module {
+	margin: 0px 5px;
+}
+
+#workspaces {
+	margin-left: 0px;
+}
+#custom-control-center {
+	margin-right: 0px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 0px 10px;
+}
+#workspaces button label { 
+   color: alpha(@color12, 0.5);
+}
+#workspaces button:hover label {
+    color: alpha(@color12, 0.85);
+}
+#workspaces button.active label {
+    color: alpha(@color12, 1.0);
+}
+
+#cpu, #memory, #temperature, #custom-tray-icon, #custom-perf-icon {
+    margin-right:10px;
+}
+
+
+#custom-arch-icon {
+  background-image: url("/home/art/.config/waybar/archlinux-icon.svg");
+    background-size: contain;
+  background-position: center;
+  
+}
+
+
