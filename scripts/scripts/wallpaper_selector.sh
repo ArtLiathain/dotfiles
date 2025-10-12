@@ -18,7 +18,7 @@
 #             the wallpapers included in the theme you are in.
 
 # Set some variables
-wall_dir="${HOME}/.config/hypr/wallpapers/"
+wall_dir="${HOME}/Documents/wallpapers/"
 cache_dir="${HOME}/.cache/thumbnails/wal_selector"
 converted_cache_dir="${HOME}/.cache/converted_wallpapers/"
 rofi_config_path="${HOME}/.config/rofi/rofi-wallpaper-sel.rasi"

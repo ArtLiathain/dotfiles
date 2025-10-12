@@ -15,7 +15,7 @@ config.colors = {
 
 	ansi = {
 		wal_colors.color0,
-		wal_colors.color1, -- red (incorrect)
+		wal_colors.color1,
 		"66ff66", -- red (incorrect)
 		wal_colors.color3,
 		wal_colors.color4,
@@ -25,7 +25,7 @@ config.colors = {
 	},
 
 	brights = {
-		wal_colors.color1,
+		wal_colors.color8,
 		"ff6666",
 		wal_colors.color10,
 		wal_colors.color11,

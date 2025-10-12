@@ -959,14 +959,14 @@ require('lazy').setup({
     version = '1.*',
     opts = {}, -- lazy.nvim will implicitly calls `setup {}`
   },
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   {
-    'bjarneo/pixel.nvim',
+    'RedsXDD/neopywal.nvim',
+    name = 'neopywal',
+    lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'pixel'
-    end,
+    version = '*',
   },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -1104,15 +1104,18 @@ require('catppuccin').setup {
 -- setup must be called before loading
 vim.cmd.colorscheme 'catppuccin'
 
--- Make Normal highlight transparent
-vim.cmd [[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NormalNC guibg=NONE ctermbg=NONE
-]]
--- init.lua
-
-require('pixel').setup {
-  highlights = {
-    TabLineFill = { bg = 'none', link = 'TabLine' },
+local neopywal = require 'neopywal'
+neopywal.setup {
+  use_palette = {
+    light = 'wallust',
+    dark = 'wallust',
   },
+  transparent_background = true,
 }
+vim.cmd.colorscheme 'neopywal'
+-- Make Normal highlight transparent
+--vim.cmd [[
+--highlight Normal guibg=NONE ctermbg=NONE
+--highlight NormalNC guibg=NONE ctermbg=NONE
+--]]
+-- init.lua

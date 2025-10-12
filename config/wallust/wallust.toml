@@ -76,3 +76,4 @@ waybar-colours = {template = 'waybar-colours.css', target = '~/.config/waybar/wa
 mako-config = {template = 'mako-config', target = '~/.config/mako/config'}
 
 archlinux-icon = {template = 'archlinux-icon.svg', target = '~/.config/waybar/archlinux-icon.svg'}
+neopywal = {template = 'colors_neopywal.vim', target = '~/.cache/wallust/colors_neopywal.vim'}
