@@ -25,8 +25,6 @@ hyprutils-git
 hyprutils-git-debug
 hyprwayland-scanner-git
 hyprwayland-scanner-git-debug
-matugen-git
-matugen-git-debug
 nnn-git
 nnn-git-debug
 notion-app-electron
@@ -39,7 +37,6 @@ ttf-symbola
 ttf-unifont
 vesktop
 vesktop-debug
-visual-paradigm-community-debug
 wakafetch-git
 wakafetch-git-debug
 wallust-git

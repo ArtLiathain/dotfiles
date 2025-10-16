@@ -1106,10 +1106,7 @@ vim.cmd.colorscheme 'catppuccin'
 
 local neopywal = require 'neopywal'
 neopywal.setup {
-  use_palette = {
-    light = 'wallust',
-    dark = 'wallust',
-  },
+  use_wallust = true,
   transparent_background = true,
 }
 vim.cmd.colorscheme 'neopywal'
