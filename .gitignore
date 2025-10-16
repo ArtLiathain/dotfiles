@@ -1,1 +1,8 @@
 .zcompdump
+colors-hyprland
+colors-hyprlock
+mako/config
+*.rasi
+archlinux-icon.svg
+waybar-colours.css
+wezterm_colours.lua
