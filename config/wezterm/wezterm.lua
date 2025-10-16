@@ -46,6 +46,12 @@ config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_image = constants.bg_image
 config.window_background_opacity = 0.8 -- your default
+config.window_padding = {
+	left = 5, -- or whatever you prefer
+	right = 0,
+	top = 5,
+	bottom = 0, -- 👈 removes bottom padding
+}
 
 -- Silence GUI notifications & warnings
 config.exit_behavior = "Close" -- closes child windows silently

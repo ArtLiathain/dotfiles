@@ -1,7 +1,7 @@
 @import url('./waybar-colours.css');
 
 * {
-    font-size:14px;
+    font-size:15px;
     font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
 	transition: all 0.5s ease;
 }
@@ -23,7 +23,20 @@ tooltip {
     color: @color12;
 }
 
-#clock:hover, #custom-arch-icon, #custom-updates:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-updates:hover, #tray:hover #custom-battery:hover label {
+
+window#waybar {
+    all: unset;
+    background: alpha(@color0, 0.8);
+    border: none;
+    box-shadow: none;
+}
+
+.modules-left, .modules-center, .modules-right {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+#clock:hover, #custom-arch-icon, #custom-updates:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-updates:hover, #tray:hover #custom-battery:hover, #custom-pomodoro:hover label {
     color: @color2;
 }
 
@@ -31,13 +44,13 @@ tooltip {
     color: @color12;
 }
 
-#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-battery, #custom-updates, #custom-pomodoro, #privacy, #custom-arch-icon {
-    color: @color12;
-	padding: 8px 15px;
-	margin: 0px 2px;
-	border-radius: 10px;
-    background: alpha(@color0, .95);
-    box-shadow: 0px 0px 2px alpha(@color7, 0.35);
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-battery, #custom-updates, #custom-pomodoro, #privacy, #custom-arch-icon, #custom-pomodoro {
+    background: transparent;
+    padding: 0 8px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    
 }
 
 #audio .module, #connection .module {
@@ -56,16 +69,16 @@ tooltip {
     padding: 0px 10px;
 }
 #workspaces button label { 
-   color: alpha(@color12, 0.5);
+   color: alpha(@color12, 0.8);
 }
 #workspaces button:hover label {
-    color: alpha(@color12, 0.85);
+    color: alpha(@color14, 0.85);
 }
 #workspaces button.active label {
-    color: alpha(@color12, 1.0);
+    color: alpha(@color14, 1.0);
 }
 
-#cpu, #memory, #temperature, #custom-tray-icon, #custom-perf-icon {
+#cpu, #memory, #custom-tray-icon, #custom-perf-icon {
     margin-right:10px;
 }
 
@@ -74,7 +87,7 @@ tooltip {
   background-image: url("/home/art/.config/waybar/archlinux-icon.svg");
     background-size: contain;
   background-position: center;
-  
+  margin: 0px 5px 0px 0px;
 }
 
 

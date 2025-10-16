@@ -13,14 +13,14 @@ layer=overlay
 anchor=top-right
 
 # Default notification style - using background as the base
-background-color=#0E0000
-text-color=#E64355
-border-color=#6196AA
-progress-color=over #BB5863
+background-color=#474847
+text-color=#9E8C69
+border-color=#A39F90
+progress-color=over #8F8570
 
 # Grouped notifications
 [grouped]
-background-color=#0E0000
-border-color=#6196AA
+background-color=#474847
+border-color=#A39F90
 format=<b>%s</b>\n%b (%g)
 

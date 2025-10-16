@@ -1,11 +1,10 @@
-
 {
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["custom/arch-icon", "hyprland/workspaces", "group/tray"],
+        "modules-left": ["custom/arch-icon","custom/separator", "hyprland/workspaces", "custom/separator","group/tray", "custom/separator", "custom/pomodoro"],
         "modules-center": ["clock"],
-        "modules-right": [ "mpris", "privacy", "group/audio", "group/connection", "custom/battery"],
+        "modules-right": [ "mpris","custom/separator", "privacy", "group/audio","custom/separator", "group/connection","custom/separator", "custom/battery"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -18,7 +17,6 @@
 				"sterminal": "",
 				"wezterm": "",
 					"class<wezterm> title<vim.*>": "",
-				"class<UnrealEditor> title<.+>": "<span font_size='10pt'>󰦱</span>",
 				"class<UnrealEditor> title<>": "",
 				"class<io.github.achetagames.epic_asset_manager>": " ",
 				"obsidian": "󰠮",
@@ -65,12 +63,16 @@
 			"tooltip": false,	
 			"format": ""
 		},
-        "custom/arch-icon": {
-            "tooltip": true,
-            "format": " ",
-            "tooltip-format": "Arch Linux"
-    },
-		"group/connection":
+        "custom/separator": {
+            "format": "|",
+            "tooltip": false
+        },
+            "custom/arch-icon": {
+                "tooltip": true,
+                "format": " ",
+                "tooltip-format": "Arch Linux"
+        },
+            "group/connection":
 		{
 			"orientation": "inherit",
 			"modules": [
@@ -192,5 +194,12 @@
                     ""   // 90–100%
         ]
     }
+},
+"custom/pomodoro": {
+	"format": "{}",
+	"return-type": "json",
+	"exec": "bash -c '$HOME/.local/bin/waybar-module-pomodoro'",
+	"on-click": "bash -c '$HOME/.local/bin/waybar-module-pomodoro toggle'",
+	"on-click-right": "bash -c '$HOME/.local/bin/waybar-module-pomodoro reset'",
 }
 } 

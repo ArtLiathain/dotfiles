@@ -1116,3 +1116,4 @@ vim.cmd.colorscheme 'neopywal'
 --highlight NormalNC guibg=NONE ctermbg=NONE
 --]]
 -- init.lua
+vim.opt.cmdheight = 0

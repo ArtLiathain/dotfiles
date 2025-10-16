@@ -127,7 +127,7 @@ scrollbar {
 	border-radius: 				 5px;
 	margin: 					 0px 0px 0px 10px;		
 	background-color: 			 rgba(, 0.3);
-	handle-color: 				 #576277;
+	handle-color: 				 #756C61;
     handle-width: 				 4px;
 }
 
