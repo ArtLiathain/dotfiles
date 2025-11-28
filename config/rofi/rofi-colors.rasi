@@ -1,0 +1,33 @@
+* {
+    wallpaper: "/home/art/.cache/converted_wallpapers/active_wallpaper.jpg";
+
+    active-background: #746B5F;
+    active-foreground: #FFF8DB;
+    normal-background: #101214;
+    normal-foreground: #FFF8DB;
+    urgent-background: #828277;
+    urgent-foreground: #FFF8DB;
+	
+    alternate-active-background: #101214;
+    alternate-active-foreground: #FFF8DB;
+    alternate-normal-background: #101214;
+    alternate-normal-foreground: #FFF8DB;
+    alternate-urgent-background: #101214;
+    alternate-urgent-foreground: #FFF8DB;
+
+    selected-active-background: #828277;
+    selected-active-foreground: #FFF8DB;
+    selected-normal-background: #45747C;
+    selected-normal-foreground: #FFF8DB;
+    selected-urgent-background: #F6EDC4;
+    selected-urgent-foreground: #101214;
+
+    background: #101214;
+    foreground: #FFF8DB;
+    border-color: #FFF8DB;
+
+    // General settings
+    background-color: transparent;
+    cursor-width: 1px;
+    font: "Caskaydia Cove Nerd Font 14";
+}

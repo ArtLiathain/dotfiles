@@ -76,3 +76,7 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
+
+# bun completions
+[ -s "/home/art/.bun/_bun" ] && source "/home/art/.bun/_bun"

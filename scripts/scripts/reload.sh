@@ -8,6 +8,6 @@ pkill hyprpaper 2>/dev/null
 hyprctl dispatch exec hyprpaper &
 makoctl reload
 # Reload Waybar (SIGUSR2 makes Waybar reload its config and style)
-pkill -SIGUSR2 waybar 2>/dev/null
+# pkill -SIGUSR2 waybar 2>/dev/null
 
 echo "✅ Wallust hook: Hyprpaper restarted and Waybar refreshed."
