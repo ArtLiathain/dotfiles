@@ -1,4 +1,3 @@
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -15,14 +14,25 @@ rtp:prepend(lazypath)
 require('lazy').setup {
   -- 1. The "spec" section is ONLY for plugins and imports
   spec = {
-    { import = 'plugins.ui' },
-    { import = 'plugins.editor' },
-    { import = 'plugins.navigation' },
-    { import = 'plugins.lsp' },
-    { import = 'plugins.git' },
-
-    -- You can also add specific plugins directly here:
-    -- { 'RedsXDD/neopywal.nvim', lazy = false, priority = 1000 },
+    { import = 'plugins.ui.neopywal' },
+    { import = 'plugins.ui.catppuccin' },
+    { import = 'plugins.git.lazygit' },
+    { import = 'plugins.git.gitsigns' },
+    { import = 'plugins.editor.wakatime' },
+    { import = 'plugins.editor.mini' },
+    { import = 'plugins.editor.lint' },
+    { import = 'plugins.editor.autopairs' },
+    { import = 'plugins.editor.typst-preview' },
+    { import = 'plugins.editor.autoformat' },
+    { import = 'plugins.editor.todo-comments' },
+    { import = 'plugins.editor.which-key' },
+    { import = 'plugins.editor.autocomplete' },
+    { import = 'plugins.editor.oil' },
+    { import = 'plugins.navigation.telescope' },
+    { import = 'plugins.navigation.treesitter' },
+    { import = 'plugins.lsp.lazydev' },
+    { import = 'plugins.lsp.lsp' },
+    { import = 'plugins.debug.dap' },
   },
 
   -- 2. The "ui" section is a TOP-LEVEL option for lazy.nvim itself

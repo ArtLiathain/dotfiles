@@ -1,5 +1,3 @@
--- lua/plugins/lsp.lua
-
 return {
   'neovim/nvim-lspconfig',
   event = { 'BufReadPre', 'BufNewFile' },
@@ -16,7 +14,7 @@ return {
   },
 
   config = function()
-    local servers_to_install = require 'config.lspconfig.init'
+    local servers_to_install = require 'lsp_config.init'
     require('mason-lspconfig').setup {
       ensure_installed = servers_to_install,
     }

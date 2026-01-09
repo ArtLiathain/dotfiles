@@ -85,7 +85,7 @@ end
 
 -- 4. SERVER SETUP LOOP (Handles Custom Config Merging)
 for _, server in ipairs(servers_to_configure) do
-  local success, config_module = pcall(require, 'config.lspconfig.' .. server)
+  local success, config_module = pcall(require, 'lsp_config.' .. server)
 
   -- If the custom file exists, use its table; otherwise, use an empty table
   local server_config = (success and type(config_module) == 'table') and config_module or {}
