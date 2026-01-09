@@ -1,5 +1,4 @@
--- Wallust template for WezTerm colors
--- This file only defines a colors table
+-- Wallust template for WezTerm colors DO NOT EDIT
 return {
 	foreground = "{{ foreground }}",
 	background = "{{ background }}",

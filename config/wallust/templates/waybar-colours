@@ -1,8 +1,4 @@
-/* -*- css -*- */
 /* NOTE: This file is managed by Wallust. Do not edit manually. */
-/* Backgrounds and foregrounds */
-/* Wallust Generated Colors */
-/* Wallust 16 Mapping - Grouped Logic */
 
 /* 1. Direct ANSI Mappings */
 @define-color color0  {{color0}};

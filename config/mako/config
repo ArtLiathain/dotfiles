@@ -1,3 +1,4 @@
+# NOTE: This file is managed by Wallust. Do not edit manually. 
 # Font and dimensions
 font=JetBrains Mono 10
 width=300
@@ -14,15 +15,15 @@ anchor=top-right
 
 default-timeout=5000
 # Default notification style - using background as the base
-background-color=#12100F
-text-color=#BBF8BE
-border-color=#BB6A64
-progress-color=over #69A66C
+background-color=#0C0000
+text-color=#B4E9FC
+border-color=#576277
+progress-color=over #6196AA
 
 # Grouped notifications
 [grouped]
-background-color=#68845D
-border-color=#BB6A64
+background-color=#6E5054
+border-color=#576277
 format=<b>%s</b>\n%b (%g)
 
 

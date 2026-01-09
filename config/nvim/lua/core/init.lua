@@ -1,8 +1,5 @@
 require 'plugins'
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -86,6 +83,4 @@ vim.opt.expandtab = true -- convert tabs to spaces by default
 vim.opt.background = nil
 
 vim.opt.cmdheight = 0
-local neopywal = require 'neopywal'
-
 vim.cmd.colorscheme 'neopywal'

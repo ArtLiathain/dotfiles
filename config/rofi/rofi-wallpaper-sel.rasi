@@ -67,7 +67,7 @@ entry {
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search Wallpaper";
-    placeholder-color:           #12100F80;
+    placeholder-color:           #0C000080;
 }
 
 dummy {
@@ -133,7 +133,7 @@ element {
     cursor:                      pointer;
     background-color:            @foreground;
 	border:						 2px;
-	border-color:				 #BB6A64CC;
+	border-color:				 #576277CC;
     text-color:                  @background;
 }
 

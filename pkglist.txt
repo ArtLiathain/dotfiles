@@ -10,6 +10,7 @@ avr-libc
 avrdude
 base
 base-devel
+bat
 bluetui
 bluez
 bluez-utils
@@ -46,6 +47,7 @@ impala
 iniparser
 intel-media-driver
 iwd
+jless
 jq
 kdenlive
 kitty

@@ -1,3 +1,5 @@
+# WALLUST GENERATED FILE DO NOT EDIT
+
 $foregroundCol = 0xff{{foreground | replace("#", "") }}
 $backgroundCol = 0xff{{background | replace("#", "") }}
 $color0 = 0xff{{color0 | replace("#", "") }}
