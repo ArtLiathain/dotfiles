@@ -14,15 +14,15 @@ anchor=top-right
 
 default-timeout=5000
 # Default notification style - using background as the base
-background-color=#1C1C1C
-text-color=#F6F2E2
-border-color=#756E62
-progress-color=over #A3A090
+background-color=#12100F
+text-color=#BBF8BE
+border-color=#BB6A64
+progress-color=over #69A66C
 
 # Grouped notifications
 [grouped]
-background-color=#4D4D4B
-border-color=#756E62
+background-color=#68845D
+border-color=#BB6A64
 format=<b>%s</b>\n%b (%g)
 
 

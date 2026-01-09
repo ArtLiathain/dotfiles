@@ -5,36 +5,36 @@
 /* Wallust 16 Mapping - Grouped Logic */
 
 /* 1. Direct ANSI Mappings */
-@define-color color0  #474747;
-@define-color color1  #4D4D4B;
-@define-color color2  #756E62;
-@define-color color3  #727B83;
-@define-color color4  #928570;
-@define-color color5  #838E9A;
-@define-color color6  #ACA481;
-@define-color color7  #EAE4CD;
-@define-color color8  #A3A090;
-@define-color color9  #545352;
-@define-color color10 #897F70;
-@define-color color11 #788591;
-@define-color color12 #A18C69;
-@define-color color13 #AFBDCD;
-@define-color color14 #E5DAAC;
-@define-color color15 #EAE4CD;
+@define-color color0  #3C3B39;
+@define-color color1  #68845D;
+@define-color color2  #BB6A64;
+@define-color color3  #5081AD;
+@define-color color4  #9F8588;
+@define-color color5  #9E8C58;
+@define-color color6  #2FB134;
+@define-color color7  #96ED9A;
+@define-color color8  #69A66C;
+@define-color color9  #5E8B4A;
+@define-color color10 #DF524A;
+@define-color color11 #4490D4;
+@define-color color12 #D4B1B6;
+@define-color color13 #D2BB75;
+@define-color color14 #3EEC46;
+@define-color color15 #96ED9A;
 
 /* 2. Recreating your "Catppuccin Groups" with Wallust slots */
 
 /* Base layers */
-@define-color base      #1C1C1C;   /* The main background */
-@define-color mantle    #474747;       /* Darker UI elements */
-@define-color crust     #A3A090;       /* Deepest contrast */
-@define-color surface0  #ACA481;      /* Lighter UI surfaces */
-@define-color surface1  #756E62;      /* Lighter UI surfaces */
-@define-color text      #F6F2E2;   /* Primary text */
-@define-color subtext0  #EAE4CD;       /* Secondary text */
+@define-color base      #12100F;   /* The main background */
+@define-color mantle    #68845D;       /* Darker UI elements */
+@define-color crust     #69A66C;       /* Deepest contrast */
+@define-color surface0  #9F8588;      /* Lighter UI surfaces */
+@define-color surface1  #5E8B4A;      /* Lighter UI surfaces */
+@define-color text      #BBF8BE;   /* Primary text */
+@define-color subtext0  #96ED9A;       /* Secondary text */
 
 /* 3. Main UI Variables (Matching your previous logic) */
-@define-color accent    #A18C69;      /* Replaces @lavender */
+@define-color accent    #D4B1B6;      /* Replaces @lavender */
 @define-color main-br   @subtext0;
 @define-color main-bg   @base;
 @define-color main-fg   @text;
@@ -42,7 +42,7 @@
 /* 4. Grouped Module Mappings */
 
 /* These all used @mantle before */
-@define-color workspaces  @mantle;
+@define-color workspaces  @surface1;
 @define-color temperature @mantle;
 @define-color tray         @mantle;
 @define-color volume       @mantle;
@@ -58,5 +58,5 @@
 @define-color battery     @surface0;
 
 /* State colors */
-@define-color warning     #727B83;     /* Yellow/Orange slot */
-@define-color critical    #4D4D4B;     /* Red slot */
+@define-color warning     #5081AD;     /* Yellow/Orange slot */
+@define-color critical    #68845D;     /* Red slot */

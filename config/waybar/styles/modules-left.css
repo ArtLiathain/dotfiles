@@ -27,17 +27,22 @@
 
 
 #custom-right_div.6 {
-    color: @date;
+    color: @tray;
 }
 
 
 #custom-right_div.7 {
-    color: @tray;
-    background-color: @date;
+    color: @workspaces;
+    background-color: @tray;
+}
+
+#custom-right_div.8 {
+    color: @base;
+    background-color: @workspaces;
 }
 
 #custom-pomodoro {
-    background-color: @date;
+    background-color: @tray;
     padding-left: 5px;
 }
 

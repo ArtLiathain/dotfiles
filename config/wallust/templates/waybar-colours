@@ -26,10 +26,10 @@
 
 /* Base layers */
 @define-color base      {{background}};   /* The main background */
-@define-color mantle    {{color0}};       /* Darker UI elements */
+@define-color mantle    {{color1}};       /* Darker UI elements */
 @define-color crust     {{color8}};       /* Deepest contrast */
-@define-color surface0  {{color6}};      /* Lighter UI surfaces */
-@define-color surface1  {{color2}};      /* Lighter UI surfaces */
+@define-color surface0  {{color4}};      /* Lighter UI surfaces */
+@define-color surface1  {{color9}};      /* Lighter UI surfaces */
 @define-color text      {{foreground}};   /* Primary text */
 @define-color subtext0  {{color7}};       /* Secondary text */
 
@@ -42,7 +42,7 @@
 /* 4. Grouped Module Mappings */
 
 /* These all used @mantle before */
-@define-color workspaces  @mantle;
+@define-color workspaces  @surface1;
 @define-color temperature @mantle;
 @define-color tray         @mantle;
 @define-color volume       @mantle;
