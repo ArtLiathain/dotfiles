@@ -16,7 +16,7 @@ require('lazy').setup {
   -- 1. The "spec" section is ONLY for plugins and imports
   spec = {
     { import = 'plugins.ui' },
-    { import = 'plugins.usage' },
+    { import = 'plugins.editor' },
     { import = 'plugins.navigation' },
     { import = 'plugins.lsp' },
     { import = 'plugins.git' },
