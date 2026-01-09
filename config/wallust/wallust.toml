@@ -58,8 +58,6 @@ hyprpaper = { template = 'hyprpaper.conf', target = '~/.config/hypr/hyprpaper.co
 # Hyprlock
 colors-hyprlock = { template = 'colors-hyprlock', target = '~/.config/hypr/colors-hyprlock' }
 
-# Kitty terminal
-colors-kitty = { template = 'colors-kitty.conf', target = '~/.config/kitty/colors-kitty.conf' }
 
 # Dmenu
 dmenu = { template = 'dmenu.Xresources', target = '~/.Xresources.d/dmenu.Xresources' }
@@ -72,9 +70,8 @@ rofi-wallpaper-sel = { template = 'rofi-wallpaper-sel.rasi', target = '~/.config
 rofi-simple = { template = 'rofi-simple-config.rasi', target = '~/.config/rofi/rofi-simple-config.rasi' }
 
 wezterm_colours = {template = 'wezterm_colours.lua', target = '~/.config/wezterm/wezterm_colours.lua'}
-waybar-colours = {template = 'waybar-colours.css', target = '~/.config/waybar/waybar-colours.css'}
+waybar-colours = {template = 'waybar-colours', target = '~/.config/waybar/current-theme.css'}
 mako-config = {template = 'mako-config', target = '~/.config/mako/config'}
 
-archlinux-icon = {template = 'archlinux-icon.svg', target = '~/.config/waybar/archlinux-icon.svg'}
 neopywal = {template = 'colors_neopywal.vim', target = '~/.cache/wallust/colors_neopywal.vim'}
 tmux = {template = 'tmux.conf', target = '~/.tmux.conf'}

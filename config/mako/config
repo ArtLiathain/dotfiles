@@ -12,27 +12,17 @@ max-visible=5
 layer=overlay
 anchor=top-right
 
+default-timeout=5000
 # Default notification style - using background as the base
-<<<<<<< HEAD
-background-color=#0E0000
-text-color=#E64355
-border-color=#6196AA
-progress-color=over #BB5863
+background-color=#1C1C1C
+text-color=#F6F2E2
+border-color=#756E62
+progress-color=over #A3A090
 
 # Grouped notifications
 [grouped]
-background-color=#0E0000
-border-color=#6196AA
-=======
-background-color=#3A3C3F
-text-color=#9C9B8B
-border-color=#ADA689
-progress-color=over #828277
-
-# Grouped notifications
-[grouped]
-background-color=#3A3C3F
-border-color=#ADA689
->>>>>>> fab1206 (update)
+background-color=#4D4D4B
+border-color=#756E62
 format=<b>%s</b>\n%b (%g)
+
 

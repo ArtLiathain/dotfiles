@@ -1,93 +1,12 @@
-@import url('./waybar-colours.css');
-
+/* ignore GTK theme */
 * {
-    font-size:15px;
-    font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
-	transition: all 0.5s ease;
-}
-window#waybar{
-    all: unset;
-}
-.modules-left {
-    margin: 5px 0px 2px 10px;
-}
-.modules-center {
-    margin: 5px 0px 2px 0px;
-}
-.modules-right {
-    margin: 5px 10px 2px 0px;
-}
-tooltip {
-    background: @color0;
-    border: 1px solid alpha(@color12, 0.8);
-    color: @color12;
+	all: initial;
 }
 
-
-window#waybar {
-    all: unset;
-    background: alpha(@color0, 0.8);
-    border: none;
-    box-shadow: none;
-}
-
-.modules-left, .modules-center, .modules-right {
-    margin: 0;
-    padding: 5px 10px;
-}
-
-#clock:hover, #custom-arch-icon, #custom-updates:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-updates:hover, #tray:hover #custom-battery:hover, #custom-pomodoro:hover label {
-    color: @color2;
-}
-
-.modules-right .module, .modules-left .module, .modules-center .module {
-    color: @color12;
-}
-
-#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-battery, #custom-updates, #custom-pomodoro, #privacy, #custom-arch-icon, #custom-pomodoro {
-    background: transparent;
-    padding: 0 8px;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    
-}
-
-#audio .module, #connection .module {
-	margin: 0px 5px;
-}
-
-#workspaces {
-	margin-left: 0px;
-}
-#custom-control-center {
-	margin-right: 0px;
-}
-
-#workspaces button {
-    all: unset;
-    padding: 0px 10px;
-}
-#workspaces button label { 
-   color: alpha(@color12, 0.8);
-}
-#workspaces button:hover label {
-    color: alpha(@color14, 0.85);
-}
-#workspaces button.active label {
-    color: alpha(@color14, 1.0);
-}
-
-#cpu, #memory, #custom-tray-icon, #custom-perf-icon {
-    margin-right:10px;
-}
-
-
-#custom-arch-icon {
-  background-image: url("/home/art/.config/waybar/archlinux-icon.svg");
-    background-size: contain;
-  background-position: center;
-  margin: 0px 5px 0px 0px;
-}
-
-
+@import "current-theme.css";
+@import "styles/fonts.css";
+@import "styles/global.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";
+@import "styles/states.css";

@@ -1,205 +1,123 @@
 {
-        "layer": "top",
-        "position": "top",
-        "reload_style_on_change": true,
-        "modules-left": ["custom/arch-icon","custom/separator", "hyprland/workspaces", "custom/separator","group/tray", "custom/separator", "custom/pomodoro"],
-        "modules-center": ["clock"],
-        "modules-right": [ "mpris","custom/separator", "privacy", "group/audio","custom/separator", "group/connection","custom/separator", "custom/battery"],
-        "hyprland/workspaces": {
-			"all-outputs": false,	
-            "format": "{name} <span font_size='8pt'>{windows}</span>",
-			"show-special": true,
-			"special-visible-only": true,
-       		"window-rewrite-default": "",
-			"window-rewrite": {
-				"class<firefox>": "",
-                "class<notion>": "",
-				"sterminal": "",
-				"wezterm": "",
-					"class<wezterm> title<vim.*>": "",
-				"class<UnrealEditor> title<>": "",
-				"class<io.github.achetagames.epic_asset_manager>": " ",
-				"obsidian": "󰠮",
-				"code": "󰨞",
-				"title<btop>": "󰊚",
-				"KeePassXC": "",
-                "Spotify":"🎶", 
-				"Rofi": "",
-				"music": "","nautilus": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
-				"steam": "","discord": " ","heroic": "",
-				"hl2_linux": "",
-				"class<Minecraft Launcher": "",
-					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
-				"class<(steam_proton)>": "",
-				"class<(steam_app_.*)>": ""
-			} 
+	/*
+	"include": [
+		"~/.config/waybar/modules/*.jsonc",
+		"~/.config/waybar/modules/custom/*.jsonc",
+		"~/.config/waybar/modules/hyprland/*.jsonc"
 
-		},
-        "mpris": {
-			"player": "spotify_player",	
-			"format": "{status_icon} {title} - {artist}",
-			"format-stopped": "{status_icon}",
-			"artist-len": 15,
-			"title-len": 20,
-			"player-icons": {
-				"firefox": "",
-				"chromium": ""
-			},
-			"status-icons": {
-				"playing": " ",
-				"paused": " ",
-				"stopped": " "
-			},
-			"ignored-players": ["firefox"]
-		},
-		"group/audio":
-		{
-            "orientation": "inherit",
-			"modules": [
-					"pulseaudio#input", "pulseaudio#output"
-			]	
-		},
-		"custom/perf-icon": {
-			"tooltip": false,	
-			"format": ""
-		},
-        "custom/separator": {
-            "format": "|",
-            "tooltip": false
-        },
-            "custom/arch-icon": {
-                "tooltip": true,
-                "format": " ",
-                "tooltip-format": "Arch Linux"
-        },
-            "group/connection":
-		{
-			"orientation": "inherit",
-			"modules": [
-				"bluetooth", "network"
-			]
-		},
-        "clock": {
-            "format": "{:L%A %d - %I:%M %p}",
-            "format-alt": "{:L%I:%M:%S %p}",
-            "interval": 1,   
-            "tooltip-format": "<tt>{calendar}</tt>",
-            "smooth-scrolling-threshold": 0.01,
-            "calendar": {
-                "mode"          : "year",
-                "mode-mon-col"  : 3,
-                "weeks-pos"     : "right",
-                "on-scroll"     : 1,
-                "format": {
-                    "months":     "<span color='#ffead3'><b>{}</b></span>",
-                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                }
-            },
-            "actions":  {
-                    "on-click-right": "mode",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-            }
-		},
-        "network": {
-            "format-wifi": " ",
-            "format-ethernet":" ",
-            "format-disconnected": "",
-            "tooltip-format-disconnected": "Not connected",
-            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-            "tooltip-format-ethernet": "{ifname} 🖧   {bandwidthUpBits}  {bandwidthDownBits}",
-            "on-click": "wezterm start impala"
-        },
-        "bluetooth": {
-            "format": "󰂯 {status}",
-            "format-on": "󰂯",
-            "format-off": "󰂯 off",
-            "format-disabled": "󰂲",
-            "format-no-controller": "󰂲",
-	    	"format-connected-battery": "{device_battery_percentage}% 󰂯",
-            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-            "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
-            "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-            "on-click-right": "wezterm start bluetui"
-        }, 
-        "custom/endpoint":{
-            "format": " ",
-            "tooltip": false
-        },
-        "group/tray": { 
-            "orientation": "inherit", 
-            "modules": ["custom/perf-icon", "cpu", "memory", "temperature"], 
-        },
-        "cpu": {
-            "format": "{usage}% ",
-            "tooltip": true
-        },
-        "memory": {
-            "format": "{percentage}% ",
-            "tooltip": true
-		},
-        "temperature": {
-            "critical-threshold": 80,
-            "format": "{temperatureC}° ",
-		    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input",
-            "tooltip-format": "CPU: {temperatureC}°C"
-		},
-        "tray": {
-            "icon-size": 14,
-            "spacing": 15
-        },
-		"pulseaudio#input": {
-     		"scroll-step": 1,
-        	"format": "{format_source}",
-        	"format-source": " {volume}%",
-	        "format-source-muted": " ",	
-			"tooltip-format": "{format_source}",
-    		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",	
-		    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
-		    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%"
-		},
-		"pulseaudio#output": {
-     		"scroll-step": 1,
-        	"format": "{icon} {volume}%",
-	        "format-bluetooth": "󰂰",
-        	"format-bluetooth-muted": "{format_muted}",
-	        "format-muted": "",
-        	"format-icons": {
-       			"headphone": " ",
-            	"headset": " ",
-       	    	"default": ["", "", " ", " "]
-		    },
-			"tooltip-format": "{desc}",
-	        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-            "on-click-right": "pavucontrol",
-		},
-    "custom/battery": {
-        "exec": "~/.config/waybar/battery.sh",
-        "return-type": "json",
-        "format": "{icon} :  {percentage}%",
-        "interval": 10,
-        "tooltip": true,
-        "format-icons": {
-                "charging": "",
-                "full": "",
-                "discharging": [
-                    "",  // 0–29%
-                    "",  // 30–49%
-                    "",  // 50–69%
-                    "",  // 70–89%
-                    ""   // 90–100%
-        ]
-    }
-},
-"custom/pomodoro": {
-	"format": "{}",
-	"return-type": "json",
-	"exec": "bash -c '$HOME/.local/bin/waybar-module-pomodoro'",
-	"on-click": "bash -c '$HOME/.local/bin/waybar-module-pomodoro toggle'",
-	"on-click-right": "bash -c '$HOME/.local/bin/waybar-module-pomodoro reset'",
+		// modules that are not included by default:
+		// "~/.config/waybar/modules/extras/*.jsonc"
+	],
+	*/
+
+	"include": [
+		// modules-left
+		"~/.config/waybar/modules/custom/user.jsonc",
+		"~/.config/waybar/modules/hyprland/workspaces.jsonc",
+        "~/.config/waybar/modules/pomodoro.jsonc",
+
+		// modules-center
+		"~/.config/waybar/modules/hyprland/windowcount.jsonc",
+		"~/.config/waybar/modules/temperature.jsonc",
+		"~/.config/waybar/modules/memory.jsonc",
+		"~/.config/waybar/modules/cpu.jsonc",
+		"~/.config/waybar/modules/custom/distro.jsonc",
+		"~/.config/waybar/modules/idle_inhibitor.jsonc",
+		"~/.config/waybar/modules/clock.jsonc",
+		"~/.config/waybar/modules/network.jsonc",
+		"~/.config/waybar/modules/bluetooth.jsonc",
+		"~/.config/waybar/modules/custom/system_update.jsonc",
+
+		// modules-right
+		"~/.config/waybar/modules/mpris.jsonc",
+		"~/.config/waybar/modules/pulseaudio.jsonc",
+		"~/.config/waybar/modules/backlight.jsonc",
+		"~/.config/waybar/modules/battery.jsonc",
+		"~/.config/waybar/modules/custom/power_menu.jsonc",
+
+		"~/.config/waybar/modules/custom/dividers.jsonc"
+
+		// modules that are not included by default:
+		// "~/.config/waybar/modules/extras/taskbar.jsonc",
+		// "~/.config/waybar/modules/extras/tray.jsonc",
+		// "~/.config/waybar/modules/extras/wireplumber.jsonc"
+	],
+
+	/*------------
+	    layout
+	------------*/
+
+	"modules-left": [
+		"group/user",
+		"custom/left_div#1",
+		"hyprland/workspaces",
+		"custom/right_div#7",
+        "custom/pomodoro",
+		"custom/right_div#6",
+	],
+	"modules-center": [
+		"custom/left_div#2",
+		"temperature",
+		"custom/left_div#3",
+		"memory",
+		"custom/left_div#4",
+		"cpu",
+		"custom/left_inv#1",
+		"custom/left_div#5",
+		"custom/distro",
+		"custom/right_div#2",
+		"custom/right_inv#1",
+		"idle_inhibitor",
+		"clock#time",
+		"custom/right_div#3",
+		"clock#date",
+		"custom/right_div#4",
+		"network",
+		"bluetooth",
+		"custom/system_update",
+		"custom/right_div#5"
+	],
+	"modules-right": [
+		"mpris",
+		"custom/left_div#6",
+		"group/pulseaudio",
+		"custom/left_div#7",
+		"custom/backlight",
+		"custom/left_div#8",
+		"battery",
+		"custom/left_inv#2",
+		"custom/power_menu"
+	],
+
+	/*-------------
+	    options
+	-------------*/
+
+	// "expand-center":
+	// "expand-left":
+	// "expand-right":
+	"layer": "top",
+	// "output":
+	// "position":
+	"height": 0,
+	"width": 0,
+	"margin": 0,
+	// "margin-top":
+	// "margin-left":
+	// "margin-bottom":
+	// "margin-right":
+	// "no-center":
+	"spacing": 0,
+	// "name":
+	"mode": "dock",
+	// "start_hidden":
+	// "modifier-reset":
+	// "exclusive":
+	// "fixed-center":
+	// "passthrough":
+	// "ipc":
+	// "id":
+	"reload_style_on_change": true
+	// "on-sigusr1":
+	// "on-sigusr2":
 }
-} 

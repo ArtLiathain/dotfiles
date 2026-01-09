@@ -50,7 +50,7 @@ userimage {
 inputbar {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            #FFF8DBE6;
+    background-color:            #F6F2E2E6;
     text-color:                  @background;
     children:                    [ "dummy", "prompt", "dummy"];
 }
@@ -65,7 +65,7 @@ message {
     margin:                      0px;
     padding:                     15px;
     border-radius:               10px;
-    background-color:            #101214E6;
+    background-color:            #1C1C1CE6;
     text-color:                  @foreground;
 }
 textbox {
@@ -105,7 +105,7 @@ element {
 element-text {	
 	font: "Caskaydia Cove Nerd Font 25";
     background-color:            transparent;
-    text-color:                  #45747C;
+    text-color:                  #756E62;
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;

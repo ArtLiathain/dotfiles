@@ -1,22 +1,22 @@
 -- Wallust template for WezTerm colors
 -- This file only defines a colors table
 return {
-	foreground = "#FFF8DB",
-	background = "#101214",
-	color0 = "#3A3C3F",
-	color1 = "#746B5F", -- red (incorrect command)
-	color2 = "#45747C", -- green (correct command)
-	color3 = "#9C797B",
-	color4 = "#828277",
-	color5 = "#BD6E34",
-	color6 = "#BFB073",
-	color7 = "#F6EDC4",
-	color8 = "#ADA689",
-	color9 = "#897C6B",
-	color10 = "#498793",
-	color11 = "#B1787C",
-	color12 = "#9C9B8B",
-	color13 = "#FC9246",
-	color14 = "#FFEB99",
-	color15 = "#F6EDC4",
+	foreground = "#F6F2E2",
+	background = "#1C1C1C",
+	color0 = "#474747",
+	color1 = "#4D4D4B", -- red (incorrect command)
+	color2 = "#756E62", -- green (correct command)
+	color3 = "#727B83",
+	color4 = "#928570",
+	color5 = "#838E9A",
+	color6 = "#ACA481",
+	color7 = "#EAE4CD",
+	color8 = "#A3A090",
+	color9 = "#545352",
+	color10 = "#897F70",
+	color11 = "#788591",
+	color12 = "#A18C69",
+	color13 = "#AFBDCD",
+	color14 = "#E5DAAC",
+	color15 = "#EAE4CD",
 }
