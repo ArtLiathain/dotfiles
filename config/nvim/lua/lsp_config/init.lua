@@ -1,5 +1,6 @@
 local lspconfig = require 'lspconfig'
-local capabilities = require('blink.cmp').get_lsp_capabilities()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
 -- 1. SERVER LIST
 -- List all servers you want to configure and install via Mason
@@ -63,7 +64,7 @@ local on_attach = function(client, bufnr)
   map('gW', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
   map('grt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
 
-  if client then
+  if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, bufnr) then
     local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
     vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
       buffer = bufnr,
@@ -76,7 +77,7 @@ local on_attach = function(client, bufnr)
       callback = vim.lsp.buf.clear_references,
     })
   end
-  if client then
+  if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, bufnr) then
     map('<leader>th', function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = bufnr })
     end, '[T]oggle Inlay [H]ints')
