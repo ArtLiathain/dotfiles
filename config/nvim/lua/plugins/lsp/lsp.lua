@@ -11,6 +11,7 @@ return {
     -- Dependencies for UI/Capabilities
     { 'j-hui/fidget.nvim', opts = {} },
     'saghen/blink.cmp',
+    'SmiteshP/nvim-navic',
   },
 
   config = function()

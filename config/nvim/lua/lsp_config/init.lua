@@ -1,6 +1,6 @@
-local lspconfig = require 'lspconfig'
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
+local navic = require 'nvim-navic'
 
 -- 1. SERVER LIST
 -- List all servers you want to configure and install via Mason
@@ -50,6 +50,10 @@ vim.diagnostic.config {
   },
 } -- 3. COMMON ON_ATTACH FUNCTION (Keymaps)
 local on_attach = function(client, bufnr)
+  if client.server_capabilities.documentSymbolProvider then
+    navic.attach(client, bufnr)
+  end
+
   local map = function(keys, func, desc, mode)
     mode = mode or 'n'
     vim.keymap.set(mode, keys, func, { buffer = bufnr, desc = 'LSP: ' .. desc })
@@ -96,7 +100,11 @@ for _, server in ipairs(servers_to_configure) do
   server_config.on_attach = on_attach
 
   -- Set up the server
-  lspconfig[server].setup(server_config)
+  -- Set up the server config (overrides/extends the base config)
+  vim.lsp.config(server, server_config)
+
+  -- Enable the server config to start on the correct filetypes
+  vim.lsp.enable(server)
 end
 
 -- Return the list of servers so the plugins file can tell Mason what to install

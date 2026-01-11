@@ -5,7 +5,12 @@ return {
   priority = 1000,
   config = function()
     require('neopywal').setup {
-      use_wallust = true,
+      custom_colors = {},
+      custom_highlights = {},
+      use_palette = {
+        light = 'wallust',
+        dark = 'wallust',
+      },
       transparent_background = true,
     }
   end,

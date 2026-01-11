@@ -52,7 +52,20 @@ config.window_padding = {
 	top = 5,
 	bottom = 0, -- 👈 removes bottom padding
 }
-
+config.keys = {
+	-- This line disables the default CTRL+SHIFT+U binding (CharSelect)
+	{
+		key = "u",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		key = ".",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	-- ... (Other custom keybindings you have)
+}
 -- Silence GUI notifications & warnings
 config.exit_behavior = "Close" -- closes child windows silently
 

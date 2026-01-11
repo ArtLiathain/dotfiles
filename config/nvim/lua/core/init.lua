@@ -83,4 +83,5 @@ vim.opt.expandtab = true -- convert tabs to spaces by default
 vim.opt.background = nil
 
 vim.opt.cmdheight = 0
+
 vim.cmd.colorscheme 'neopywal'
