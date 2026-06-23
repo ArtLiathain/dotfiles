@@ -3,7 +3,7 @@ capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 local navic = require 'nvim-navic'
 
 -- 1. SERVER LIST
--- List all servers you want to configure and install via Mason
+-- List all servers you want to configure (must be installed via Nix)
 local servers_to_configure = {
   'lua_ls',
   'gopls',
@@ -109,5 +109,3 @@ for _, server in ipairs(servers_to_configure) do
   vim.lsp.enable(server)
 end
 
--- Return the list of servers so the plugins file can tell Mason what to install
-return servers_to_configure
