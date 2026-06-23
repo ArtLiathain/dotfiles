@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/run/current-system/sw/bin/bash
 
 # Custom rofi clipboard mode with support for images
 # TODO: Figure out how to remove entry number

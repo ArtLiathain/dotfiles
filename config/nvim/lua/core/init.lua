@@ -85,3 +85,13 @@ vim.opt.background = nil
 vim.opt.cmdheight = 0
 
 vim.cmd.colorscheme 'neopywal'
+
+-- Define the path to the uv-managed venv
+local venv_path = vim.fn.stdpath 'config' .. '/.venv/bin/python'
+
+-- Check if it exists and set it as the provider
+if vim.fn.executable(venv_path) == 1 then
+  vim.g.python3_host_prog = venv_path
+else
+  vim.notify("Neovim Python venv not found. Run 'uv sync' in your config folder.", vim.log.levels.WARN)
+end

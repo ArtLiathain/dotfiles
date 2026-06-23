@@ -20,6 +20,8 @@ local servers_to_configure = {
   'htmx',
   'bashls',
   'cssls',
+  'tinymist',
+  'nil_ls',
 }
 
 -- 2. GLOBAL DIAGNOSTICS CONFIG

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/run/current-system/sw/bin/bash
 # Wallust hook script — refresh Waybar + Hyprpaper after wallpaper/color change
 
 # Kill Hyprpaper to clear current wallpaper

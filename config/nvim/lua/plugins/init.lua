@@ -27,6 +27,8 @@ require('lazy').setup {
     { import = 'plugins.editor.autoformat' },
     { import = 'plugins.editor.todo-comments' },
     { import = 'plugins.editor.which-key' },
+    { import = 'plugins.editor.jupytext' },
+    { import = 'plugins.editor.molten' },
     { import = 'plugins.editor.autocomplete' },
     { import = 'plugins.editor.oil' },
     { import = 'plugins.editor.harpoon' },

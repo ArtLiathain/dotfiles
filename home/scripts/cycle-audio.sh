@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 # Get all analog sinks (ordered list)
 sinks=($(pactl list short sinks | awk '{print $2}' | grep -i "analog"))
 

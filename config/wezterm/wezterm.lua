@@ -64,6 +64,11 @@ config.keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.DisableDefaultAssignment,
 	},
+	{
+		key = "d",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
 	-- ... (Other custom keybindings you have)
 }
 -- Silence GUI notifications & warnings
@@ -77,4 +82,5 @@ config.max_fps = 120
 wezterm.on("augment-command-palette", function()
 	return commands
 end)
+config.default_prog = { "/usr/bin/tmux", "new-session", "-A", "-s", "main" }
 return config
